@@ -1,0 +1,24 @@
+[project]
+name = "durable-workflow"
+version = "0.1.0"
+description = "Durable, crash-safe approval workflows: LangGraph + SQLite checkpoints + exponential retries + Slack human-in-the-loop"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=1.2,<2",
+    "langgraph-checkpoint-sqlite>=3.1,<4",
+    "slack-bolt>=1.30,<2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[project.scripts]
+dw = "durable_workflow.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["durable_workflow"]

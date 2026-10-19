@@ -1,0 +1,14 @@
+display_information:
+  name: Durable Workflow Approvals
+features:
+  bot_user:
+    display_name: workflow-bot
+oauth_config:
+  scopes:
+    bot:
+      - chat:write
+      - chat:write.public
+settings:
+  interactivity:
+    is_enabled: true
+  socket_mode_enabled: true
